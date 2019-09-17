@@ -16,7 +16,7 @@ public class Task_4 {
         }
 
         boolean isUp = true, isDown = true;
-        while ((isDown | isUp) && (n / 10 != 0)) {
+        while ((isDown | isUp) & (n / 10 != 0)) {
             byte numeral = (byte) (n % 10);
             n /= 10;
             isUp &= numeral > (n % 10);
