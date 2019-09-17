@@ -45,9 +45,7 @@ public class Data {
     private boolean isLeap(int year) {
         if (year % 4 == 0) {
             if (year % 100 == 0) {
-                if (year % 400 == 0) {
-                    return true;
-                }
+                return year % 400 == 0;
             } else {
                 return true;
             }
