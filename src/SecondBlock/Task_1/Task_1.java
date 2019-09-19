@@ -40,7 +40,7 @@ public class Task_1 {
         BigDecimal l1 = x1.subtract(x2).pow(2).add(y1.subtract(y2).pow(2));
         BigDecimal l2 = x1.subtract(x3).pow(2).add(y1.subtract(y3).pow(2));
         BigDecimal l3 = x2.subtract(x3).pow(2).add(y2.subtract(y3).pow(2));
-        return l1.equals(l2) | l1.equals(l3) | l2.equals(l3);
+        return l1.equals(l2) || l1.equals(l3) || l2.equals(l3);
     }
 
     private static int enter(Scanner scanner) {

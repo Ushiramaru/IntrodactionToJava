@@ -18,7 +18,7 @@ public class Task_1 {
     }
 
     private static boolean compare(double a, double b, double c) {
-        return a == b & a == c;
+        return a == b && a == c;
     }
 
     private static double enter(Scanner scanner) {
