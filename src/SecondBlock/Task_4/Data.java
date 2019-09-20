@@ -1,16 +1,14 @@
 package SecondBlock.Task_4;
 
-import java.util.zip.DataFormatException;
-
 public class Data {
 
     private int day;
     private int month;
     private int year;
 
-    public Data(int day, int month, int year) throws DataFormatException {
+    public Data(int day, int month, int year) {
         if (year < 0 | month <= 0 | month > 12 | day <= 0) {
-            throw new DataFormatException();
+            throw new IllegalArgumentException();
         }
         switch (month) {
             case 4:
@@ -18,23 +16,23 @@ public class Data {
             case 9:
             case 11:
                 if (day > 30) {
-                    throw new DataFormatException();
+                    throw new IllegalArgumentException();
                 }
                 break;
             case 2:
                 if (day > 28) {
                     if (day < 30) {
                         if (!isLeap(year)) {
-                            throw new DataFormatException();
+                            throw new IllegalArgumentException();
                         }
                     } else {
-                        throw new DataFormatException();
+                        throw new IllegalArgumentException();
                     }
                 }
                 break;
             default:
                 if (day > 31) {
-                    throw new DataFormatException();
+                    throw new IllegalArgumentException();
                 }
         }
         this.day = day;

@@ -17,6 +17,7 @@ public class Task_1 {
         }
     }
 
+    //(p1.y - p2.y)*p3.x + (p2.x - p1.x)*p3.y + (p1.x*p2.y - p2.x*p1.y)
     private static boolean isTriangle(Point p1, Point p2, Point p3) {
         if (p1.equals(p2) | p1.equals(p3) | p2.equals(p3)) {
             return false;
@@ -25,7 +26,6 @@ public class Task_1 {
         BigDecimal y1 = new BigDecimal(p1.y);
         BigDecimal x2 = new BigDecimal(p2.x);
         BigDecimal y2 = new BigDecimal(p2.y);
-//        (p1.y - p2.y)*p3.x + (p2.x - p1.x)*p3.y + (p1.x*p2.y - p2.x*p1.y)
         BigDecimal result = y1.subtract(y2).multiply(new BigDecimal(p3.x)).add(x2.subtract(x1).multiply(new BigDecimal(p3.y))).add(x1.multiply(y2).subtract(x2.multiply(y1)));
         return result.intValue() != 0;
     }

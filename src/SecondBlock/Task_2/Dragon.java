@@ -2,11 +2,12 @@ package SecondBlock.Task_2;
 
 public class Dragon {
 
-    private static final int eyesOnHead = 2;
-    private static final int headBefore_200 = 3;
-    private static final int headBefore_300 = 2;
-    private static final int headAfter_300 = 1;
-
+    private static final byte EYES_ON_HEAD = 2;
+    private static final byte HEAD_BEFORE_200 = 3;
+    private static final byte HEAD_BEFORE_300 = 2;
+    private static final byte HEAD_AFTER_300 = 1;
+    private static final short YOUNG_AGE = 200;
+    private static final short MIDDLE_AGE = 300;
 
     private int headCount = 3;
     private int eyesCount;
@@ -15,7 +16,7 @@ public class Dragon {
     public Dragon(int age) {
         this.age = age;
         calculateHead();
-        eyesCount = headCount*eyesOnHead;
+        eyesCount = headCount * EYES_ON_HEAD;
     }
 
     public int getHeadCount() {
@@ -23,13 +24,13 @@ public class Dragon {
     }
 
     private void calculateHead() {
-        if (age <= 200) {
-            headCount += headBefore_200*age;
+        if (age <= YOUNG_AGE) {
+            headCount += HEAD_BEFORE_200 * age;
         } else {
-            if (age <= 300) {
-                headCount += headBefore_200*200+headBefore_300*(age-200);
+            if (age <= MIDDLE_AGE) {
+                headCount += HEAD_BEFORE_200 * MIDDLE_AGE + HEAD_BEFORE_300 * (age - YOUNG_AGE);
             } else {
-                headCount += headBefore_200*200+headBefore_300*100+headAfter_300*(age-300);
+                headCount += HEAD_BEFORE_200 * YOUNG_AGE + HEAD_BEFORE_300 * (MIDDLE_AGE - YOUNG_AGE) + HEAD_AFTER_300 *(age - MIDDLE_AGE);
             }
         }
     }
@@ -37,4 +38,5 @@ public class Dragon {
     public int getEyesCount() {
         return eyesCount;
     }
+
 }

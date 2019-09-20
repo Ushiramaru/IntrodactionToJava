@@ -14,11 +14,8 @@ public class Task_6 {
                 isWrong = false;
             }
         }
-        String revN = "";
-        for (int i = 6; i >= 0; i--) {
-            revN += n.charAt(i);
-        }
-        System.out.print(revN);
+        StringBuilder stringBuilder = new StringBuilder(n);
+        System.out.println(stringBuilder.reverse().toString());
     }
 
     private static int enter(Scanner scanner) {

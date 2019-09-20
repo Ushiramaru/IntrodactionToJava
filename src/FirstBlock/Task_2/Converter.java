@@ -4,16 +4,20 @@ import java.math.BigDecimal;
 
 public class Converter {
 
+    private static final byte MILLIGRAM_MULTIPLIER = 6;
+    private static final byte GRAM_MULTIPLIER = 3;
+    private static final byte TON_MULTIPLIER = -3;
+
     public BigDecimal getMilligram(BigDecimal weight) {
-        return weight.movePointRight(6);
+        return weight.movePointRight(MILLIGRAM_MULTIPLIER);
     }
 
     public BigDecimal getGram(BigDecimal weight) {
-        return weight.movePointRight(3);
+        return weight.movePointRight(GRAM_MULTIPLIER);
     }
 
     public BigDecimal getTon(BigDecimal weight) {
-        return weight.movePointRight(-3);
+        return weight.movePointRight(TON_MULTIPLIER);
     }
 
 }
