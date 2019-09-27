@@ -22,7 +22,7 @@ public class Matrix {
         return matrix;
     }
 
-    public static double[] exstremeValues(double[][] matrix) {
+    public static double[] extremeValues(double[][] matrix) {
         for (int row = 0; row < matrix.length - 1; row++) {
             if (matrix[row].length != matrix[row + 1].length) {
                 throw new IllegalArgumentException("Array must be matrix");
@@ -45,7 +45,7 @@ public class Matrix {
         return extreme;
     }
 
-    public static double[] averageValue(double[][] matrix) {
+    public static double[] averageValues(double[][] matrix) {
         for (int row = 0; row < matrix.length - 1; row++) {
             if (matrix[row].length != matrix[row + 1].length) {
                 throw new IllegalArgumentException("Array must be matrix");
@@ -61,11 +61,11 @@ public class Matrix {
             }
         }
         average[0] = average[0] / (matrix.length * matrix[0].length);
-        average[1] = Math.pow(average[1], 1 / (matrix.length * matrix[0].length));
+        average[1] = Math.pow(average[1], 1d / (matrix.length * matrix[0].length));
         return average;
     }
 
-    public static int[][] localExstremesPosition(double[][] matrix) {
+    public static int[][] localExtremesPosition(double[][] matrix) {
         for (int row = 0; row < matrix.length - 1; row++) {
             if (matrix[row].length != matrix[row + 1].length) {
                 throw new IllegalArgumentException("Array must be matrix");
