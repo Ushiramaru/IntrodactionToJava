@@ -9,7 +9,7 @@ import java.util.ArrayList;
 
 public class JSONSerializer implements Serializer {
 
-    public class JsonDeserializerWithInheritance<Shape> implements JsonDeserializer<Shape> {
+    private class JsonDeserializerWithInheritance<Shape> implements JsonDeserializer<Shape> {
 
         @Override
         public Shape deserialize(JsonElement json, Type typeOfT, JsonDeserializationContext context) throws JsonParseException {
