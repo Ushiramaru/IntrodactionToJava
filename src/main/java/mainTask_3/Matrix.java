@@ -4,6 +4,12 @@ import java.util.Random;
 
 public class Matrix {
 
+    protected Matrix() {
+
+    }
+
+    public void a() {}
+
     public static double[][] initializeMatrix(int rowCount, int colCount, int minValue, int maxValue) {
         if (rowCount <= 0 || colCount <= 0) {
             throw new IllegalArgumentException("Arguments must be more than 0");

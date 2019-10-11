@@ -34,4 +34,11 @@ public class Biscuits extends Pastry {
         return Objects.hash(super.hashCode(), filling);
     }
 
+    @Override
+    public String toString() {
+        return "Biscuits{" +
+                "filling=" + filling +
+                "} " + super.toString();
+    }
+
 }

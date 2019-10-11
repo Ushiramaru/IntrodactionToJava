@@ -1,10 +1,10 @@
-package mainTask_4;
+package mainTask_4.entity;
 
 import com.google.gson.annotations.SerializedName;
-import mainTask_4.entity.Pastry;
 
 import java.util.ArrayList;
 import java.util.Comparator;
+import java.util.Objects;
 
 public class Gift implements Present {
 
@@ -61,6 +61,28 @@ public class Gift implements Present {
             pastries.addAll(present.findPastries(minSugarWeight, maxSugarWeight));
         }
         return pastries;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (getClass() != o.getClass()) return false;
+        Gift gift = (Gift) o;
+        return typeName.equals(gift.typeName) &&
+                presents.equals(gift.presents);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(typeName, presents);
+    }
+
+    @Override
+    public String toString() {
+        return "Gift{" +
+                "typeName='" + typeName + '\'' +
+                ", presents=" + presents +
+                '}';
     }
 
 }

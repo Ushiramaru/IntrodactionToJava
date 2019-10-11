@@ -1,7 +1,6 @@
 package mainTask_4.entity;
 
 import com.google.gson.annotations.SerializedName;
-import mainTask_4.Present;
 
 import java.util.ArrayList;
 import java.util.Comparator;
@@ -76,6 +75,16 @@ public abstract class Pastry implements Present {
     @Override
     public int hashCode() {
         return Objects.hash(name, weight, sugarWeight);
+    }
+
+    @Override
+    public String toString() {
+        return "Pastry{" +
+                "typeName='" + typeName + '\'' +
+                ", name='" + name + '\'' +
+                ", weight=" + weight +
+                ", sugarWeight=" + sugarWeight +
+                '}';
     }
 
 }

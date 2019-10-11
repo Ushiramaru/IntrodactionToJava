@@ -2,7 +2,7 @@ package mainTask_4.serialization;
 
 import com.google.gson.*;
 import com.google.gson.reflect.TypeToken;
-import mainTask_4.Present;
+import mainTask_4.entity.Present;
 
 import java.lang.reflect.Type;
 import java.util.ArrayList;

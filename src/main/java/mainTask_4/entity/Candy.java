@@ -34,4 +34,11 @@ public abstract class Candy extends Pastry {
         return Objects.hash(super.hashCode(), wrapper);
     }
 
+    @Override
+    public String toString() {
+        return "Candy{" +
+                "wrapper=" + wrapper +
+                "} " + super.toString();
+    }
+
 }

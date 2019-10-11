@@ -35,4 +35,11 @@ public class WaffleCandy extends Candy {
         return Objects.hash(super.hashCode(), waffle);
     }
 
+    @Override
+    public String toString() {
+        return "WaffleCandy{" +
+                "waffle=" + waffle +
+                "} " + super.toString();
+    }
+
 }

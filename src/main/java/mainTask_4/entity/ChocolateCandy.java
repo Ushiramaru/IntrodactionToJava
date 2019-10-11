@@ -35,4 +35,11 @@ public class ChocolateCandy extends Candy {
         return Objects.hash(super.hashCode(), chocolate);
     }
 
+    @Override
+    public String toString() {
+        return "ChocolateCandy{" +
+                "chocolate=" + chocolate +
+                "} " + super.toString();
+    }
+
 }

@@ -1,6 +1,6 @@
 package mainTask_4.serialization;
 
-import mainTask_4.Present;
+import mainTask_4.entity.Present;
 
 import java.util.ArrayList;
 

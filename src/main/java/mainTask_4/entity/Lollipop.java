@@ -31,4 +31,11 @@ public class Lollipop extends Candy {
         return Objects.hash(super.hashCode(), isWithStick);
     }
 
+    @Override
+    public String toString() {
+        return "Lollipop{" +
+                "isWithStick=" + isWithStick +
+                "} " + super.toString();
+    }
+
 }
